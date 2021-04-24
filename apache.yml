@@ -1,0 +1,16 @@
+- name: Verify apache installation
+  hosts: apache
+  become: true
+  
+  tasks:
+  - name: Ensure apache is at the latest version
+    ansible.builtin.apt:
+      name: apache2
+      state: latest
+
+
+  - name: Ensure apache is running
+    ansible.builtin.service:
+      name: apache2
+      state: started
+

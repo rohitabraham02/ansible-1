@@ -1,0 +1,4 @@
+
+- import_playbook : createmult.yml
+- import_playbook : apache.yml
+- import_playbook : nginx.yml
